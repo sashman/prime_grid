@@ -6,7 +6,7 @@ module PrimeGrid
     module PrimeGeneration
 
       def is_prime? number
-
+        true
       end
 
       def next_prime
