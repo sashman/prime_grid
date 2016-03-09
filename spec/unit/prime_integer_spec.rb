@@ -33,6 +33,23 @@ RSpec.describe 'PrimeGeneration' do
 
     end
 
+    it 'should return true for 3' do
+
+      expect(subject.is_prime? 3).to be true
+
+    end
+
+    it 'should return true for multiple prime numbers' do
+
+      primes = [2,3,5,7,11,13,17,19,23,29]
+
+      primes.each do |prime_number|
+        expect(subject.is_prime? prime_number).to be true
+      end
+
+
+    end
+
   end
 
 end
