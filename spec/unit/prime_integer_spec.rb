@@ -49,6 +49,18 @@ RSpec.describe 'PrimeGeneration' do
 
     end
 
+    it 'should return false for 4' do
+
+      expect(subject.is_prime? 4).to be false
+
+    end
+
+    it 'should return false for 360' do
+
+      expect(subject.is_prime? 360).to be false
+
+    end
+
   end
 
 end
