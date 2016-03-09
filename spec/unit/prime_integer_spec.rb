@@ -82,9 +82,10 @@ RSpec.describe 'PrimeGeneration' do
 
     it 'should raise an error for non integer input numbers' do
 
-      expect(subject.is_prime? 3.123).to raise_error ArgumentError
-      expect(subject.is_prime? 'string').to raise_error ArgumentError
-      expect(subject.is_prime? true).to raise_error ArgumentError
+      expect{subject.is_prime? 3.123}.to raise_error ArgumentError
+      expect{subject.is_prime? 'string'}.to raise_error ArgumentError
+      expect{subject.is_prime? true}.to raise_error ArgumentError
+      expect{subject.is_prime? nil}.to raise_error ArgumentError
 
     end
 
