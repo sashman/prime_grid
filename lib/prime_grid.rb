@@ -5,11 +5,7 @@ module PrimeGrid
   module Integer
     module PrimeGeneration
 
-      def is_prime? number
-        true
-      end
-
-      def next_prime
+      def get_primes(prime_count)
         2
       end
 
