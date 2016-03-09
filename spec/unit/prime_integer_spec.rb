@@ -13,9 +13,11 @@ RSpec.describe 'PrimeGeneration' do
 
   it 'should generate 2, 3, 5 as first three prime numbers' do
 
-    expect(subject.next_prime).to eq 2
-    expect(subject.next_prime).to eq 3
-    expect(subject.next_prime).to eq 5
+    current_subject = subject
+
+    expect(current_subject.next_prime).to eq 2
+    expect(current_subject.next_prime).to eq 3
+    expect(current_subject.next_prime).to eq 5
 
   end
 
