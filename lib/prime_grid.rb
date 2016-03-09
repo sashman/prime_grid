@@ -1,5 +1,13 @@
 require "prime_grid/version"
 
 module PrimeGrid
-  # Your code goes here...
+
+  module Integer
+    module PrimeGeneration
+
+
+
+    end
+  end
+
 end
