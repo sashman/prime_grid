@@ -25,4 +25,14 @@ RSpec.describe 'PrimeGeneration' do
 
   end
 
+  describe '.is_prime?' do
+
+    it 'should return true for 2' do
+
+      expect(subject.is_prime? 2).to be true
+
+    end
+
+  end
+
 end
