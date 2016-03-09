@@ -61,6 +61,25 @@ RSpec.describe 'PrimeGeneration' do
 
     end
 
+    it 'should return false for 1' do
+
+      expect(subject.is_prime? 1).to be false
+
+    end
+
+    it 'should return false for 0' do
+
+      expect(subject.is_prime? 0).to be false
+
+    end
+
+    it 'should return false for negative numbers' do
+
+      expect(subject.is_prime? -1).to be false
+      expect(subject.is_prime? -200).to be false
+
+    end
+
   end
 
 end
