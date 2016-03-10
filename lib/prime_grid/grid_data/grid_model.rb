@@ -11,8 +11,8 @@ module PrimeGrid
 
         raise ArgumentError if header_values.nil? || (!header_values.is_a? Array) || header_values.empty?
 
-        product_data = Array.new(header_values.count) { |y| Array.new(header_values.count) {|x|
-          header_values[x] * header_values[y]
+        product_data = Array.new(header_values.count) { |y| Array.new(header_values.count) { |x|
+          header_value_product(header_values, x, y)
         } }
 
         GridModel.new product_data, header_values
@@ -29,6 +29,11 @@ module PrimeGrid
 
       def row_headers
         @headers
+      end
+
+      private
+      def self.header_value_product(header_values, x, y)
+        header_values[x] * header_values[y]
       end
 
     end

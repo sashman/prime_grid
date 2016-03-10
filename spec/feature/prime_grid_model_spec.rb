@@ -10,7 +10,7 @@ RSpec.describe 'Prime number grid' do
 
   it "Given a number of primes, create a grid model" do
 
-   
+
 
   end
 
