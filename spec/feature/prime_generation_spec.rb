@@ -23,4 +23,17 @@ RSpec.describe 'Prime number generation' do
 
   end
 
+  it "should generate 3 prime numbers" do
+
+    expect(3.primes).to eq [2, 3, 5]
+
+  end
+
+
+  it "should generate 0 prime numbers" do
+
+    expect(0.primes).to eq []
+
+  end
+
 end
