@@ -23,6 +23,20 @@ module PrimeGrid
         next_number
       end
 
+      def take_primes prime_count
+
+        prime_enumerator = Enumerator.new do |prime_array|
+          prime_number = 2
+          loop do
+            prime_array << prime_number
+            prime_number = next_prime prime_number
+          end
+        end
+
+        prime_enumerator.take prime_count
+
+      end
+
     end
   end
 
