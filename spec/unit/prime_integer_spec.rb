@@ -1,5 +1,6 @@
 require 'rspec'
 require "spec_helper"
+require 'prime_grid'
 
 RSpec.describe 'PrimeGeneration' do
 
