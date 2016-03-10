@@ -5,6 +5,9 @@ require "prime_grid/controllers/prime_grid_controller"
 
 module PrimeGrid
 
-
+  def render_console prime_count
+    controller = PrimeGrid::Controllers::PrimeGridController.new
+    controller.console_prime_grid prime_count.to_i
+  end
 
 end
