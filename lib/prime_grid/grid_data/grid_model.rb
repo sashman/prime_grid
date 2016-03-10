@@ -2,8 +2,9 @@ module PrimeGrid
   module GridData
     class GridModel
 
-      def initialize grid_data
+      def initialize grid_data, headers
         @grid_data = grid_data
+        @headers = headers
       end
 
       def self.create_product_grid header_values
@@ -14,12 +15,16 @@ module PrimeGrid
           header_values[x] * header_values[y]
         } }
 
-        GridModel.new product_data
+        GridModel.new product_data, header_values
 
       end
 
       def value_at x, y
         @grid_data[y][x]
+      end
+
+      def column_headers
+        @headers
       end
 
     end

@@ -62,7 +62,7 @@ describe 'GridModel' do
     it 'should return an array of headers give' do
 
       subject = PrimeGrid::GridData::GridModel.create_product_grid [4, 1, 8]
-      expect(subject.column_headers).to be [4,1,8]
+      expect(subject.column_headers).to eq [4,1,8]
 
     end
 
