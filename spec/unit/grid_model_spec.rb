@@ -84,7 +84,7 @@ describe 'GridModel' do
     it 'should return an array of values for a given row index' do
 
       subject = PrimeGrid::GridData::GridModel.create_product_grid [4, 1, 8]
-      expect(subject.row_values 1).to eq [16, 4, 32]
+      expect(subject.row_values 0).to eq [16, 4, 32]
 
     end
 
