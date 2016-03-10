@@ -21,6 +21,21 @@ RSpec.describe 'PrimeGeneration' do
 
     end
 
+    it 'should generate multiple consecutive prime numbers' do
+
+      primes = [3, 5, 7, 11, 13, 17, 19, 23, 29]
+
+      last_prime = subject.next_prime
+
+      primes.each do |prime_number|
+
+        last_prime = subject.next_prime last_prime
+        expect(last_prime).to eq prime_number
+
+      end
+
+    end
+
   end
 
   describe '.is_prime?' do
