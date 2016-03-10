@@ -1,0 +1,7 @@
+<% top_row = ['_'] %>
+
+<% grid.column_headers.each do |value| %>
+    <% top_row << value %>
+<% end %>
+
+<%= top_row.join '|' %>

@@ -3,6 +3,7 @@ module PrimeGrid
     class PrimeGridController
       require 'prime_grid/integer/integer_prime_generation'
       require 'prime_grid/grid_data/grid_model'
+      require 'prime_grid/utils/view_renderer'
 
       include PrimeGrid::Integer::PrimeGeneration
 
@@ -15,7 +16,7 @@ module PrimeGrid
       def console_prime_grid prime_count
 
         grid = prime_grid prime_count
-        puts grid.column_headers.join '|'
+        puts PrimeGrid::Utils::ViewRenderer.render_erb :console_grid, grid: grid
 
       end
 
