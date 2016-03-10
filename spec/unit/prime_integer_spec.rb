@@ -5,6 +5,16 @@ RSpec.describe 'PrimeGeneration' do
 
   let(:subject) { (Class.new { include PrimeGrid::Integer::PrimeGeneration }).new }
 
+  describe '.take_primes' do
+
+    it 'should generate array with first element 2 when one prime is requested' do
+
+      expect(subject.take_primes(1)).to eq [2]
+
+    end
+
+  end
+
   describe '.next_prime' do
 
     it 'should generate 2 as a first prime number' do
