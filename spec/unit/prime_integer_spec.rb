@@ -13,6 +13,14 @@ RSpec.describe 'PrimeGeneration' do
 
     end
 
+    it 'should generate array with multiple consecutive primes is requested' do
+
+      primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+
+      expect(subject.take_primes(primes.count)).to eq primes
+
+    end
+
   end
 
   describe '.next_prime' do
