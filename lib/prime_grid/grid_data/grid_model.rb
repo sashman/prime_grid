@@ -31,6 +31,10 @@ module PrimeGrid
         @headers
       end
 
+      def row_values index
+        @grid_data[index]
+      end
+
       private
       def self.header_value_product(header_values, x, y)
         header_values[x] * header_values[y]
