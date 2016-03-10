@@ -85,6 +85,8 @@ describe 'GridModel' do
 
       subject = PrimeGrid::GridData::GridModel.create_product_grid [4, 1, 8]
       expect(subject.row_values 0).to eq [16, 4, 32]
+      expect(subject.row_values 1).to eq [4, 1, 8]
+      expect(subject.row_values 2).to eq [32, 8, 64]
 
     end
 
