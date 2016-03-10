@@ -8,8 +8,8 @@ module PrimeGrid
 
       def self.create_product_grid header_values
 
-        product_data = Array.new(header_values.count) { |y| Array.new(header_values.count) {
-            header_values[0] * header_values[0]
+        product_data = Array.new(header_values.count) { |y| Array.new(header_values.count) {|x|
+          header_values[x] * header_values[y]
         } }
 
         GridModel.new product_data
