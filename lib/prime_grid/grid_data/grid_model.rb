@@ -2,7 +2,7 @@ module PrimeGrid
   module GridData
     class GridModel
 
-      def create_product_grid header_values
+      def self.create_product_grid header_values
 
       end
 
