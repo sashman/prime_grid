@@ -34,7 +34,28 @@ describe 'GridModel' do
 
       end
 
+      it 'should raise error for array of size zero' do
+
+        expect{PrimeGrid::GridData::GridModel.create_product_grid []}.to raise_error ArgumentError
+
+      end
+
+      it 'should raise error for nil input' do
+
+        expect{PrimeGrid::GridData::GridModel.create_product_grid nil}.to raise_error ArgumentError
+
+      end
+
+      it 'should raise error for non-array input' do
+
+        expect{PrimeGrid::GridData::GridModel.create_product_grid 'string'}.to raise_error ArgumentError
+        expect{PrimeGrid::GridData::GridModel.create_product_grid 123}.to raise_error ArgumentError
+
+      end
+
     end
 
   end
+
+
 end
