@@ -27,6 +27,10 @@ module PrimeGrid
         @headers
       end
 
+      def row_headers
+        @headers
+      end
+
     end
   end
 end
