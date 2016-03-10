@@ -6,7 +6,8 @@ module PrimeGrid
     module PrimeGeneration
 
       def is_prime? number
-        raise ArgumentError.new('Input must be an integer') unless number.is_a? Integer
+        Integer(number) rescue raise ArgumentError.new('Input must be an integer')
+        raise ArgumentError.new('Input must be an integer') unless number.to_i == number
 
         return false if number <= 1
         2.upto(Math.sqrt(number).to_i) do |i|
@@ -15,8 +16,11 @@ module PrimeGrid
         true
       end
 
-      def next_prime
-        2
+      def next_prime number = nil
+        return 2 unless number
+        next_number = number + 1
+        next_number = next_number + 1 until is_prime? next_number
+        next_number
       end
 
     end
