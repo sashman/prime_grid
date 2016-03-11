@@ -4,6 +4,7 @@ module PrimeGrid
       require 'prime_grid/integer/integer_prime_generation'
       require 'prime_grid/grid_data/grid_model'
       require 'prime_grid/utils/view_renderer'
+      require 'prime_grid/utils/grid_model_helper'
 
       include PrimeGrid::Integer::PrimeGeneration
 
