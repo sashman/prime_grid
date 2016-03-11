@@ -16,7 +16,8 @@ module PrimeGrid
       def console_prime_grid prime_count
 
         grid = prime_grid prime_count
-        puts PrimeGrid::Utils::ViewRenderer.render_erb :console_grid, grid: grid
+        padding = PrimeGrid::Utils::GridModelHelper.max_prime_grid_padding grid
+        puts PrimeGrid::Utils::ViewRenderer.render_erb :console_grid, grid: grid, padding: padding
 
       end
 
