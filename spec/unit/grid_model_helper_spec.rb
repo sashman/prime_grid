@@ -12,9 +12,9 @@ describe 'GridModelHelper' do
       model = double(PrimeGrid::GridData::GridModel)
       expect(model).to receive(:column_headers).and_return([])
       expect(model).to receive(:row_headers).and_return([])
-      expect(model).to receive(:value_at).and_return(1234)
+      expect(model).to receive(:value_at).and_return(123456)
 
-      expect(PrimeGrid::Utils::GridModelHelper.max_prime_grid_padding model).to eq 4
+      expect(PrimeGrid::Utils::GridModelHelper.max_prime_grid_padding model).to eq 6
 
     end
 
