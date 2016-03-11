@@ -23,6 +23,14 @@ Use rake task to generate a console output:
 
 `rake prime_grid:console[N]` where `N` is the number of primes to be generated
 
+Example:
+
+```
+> rake prime_grid:console[1]
+_|2
+2|4
+```
+
 ## Tests
 
 Run `rspec` or `rake spec`.
