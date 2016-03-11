@@ -10,4 +10,9 @@ module PrimeGrid
     controller.console_prime_grid prime_count.to_i
   end
 
+  def grid  prime_count
+    controller = PrimeGrid::Controllers::PrimeGridController.new
+    controller.prime_grid prime_count.to_i
+  end
+
 end
