@@ -35,6 +35,14 @@ _|2
 
 Run `rspec` or `rake spec`.
 
+## Using with docker
+
+If docker is available, you can save time by not installing ruby.
+
+* Build image `docker build -t prime-docker .`
+* Run rake task `docker run prime-docker rake prime_grid:console[6]`
+* Run tests `docker run prime-docker rspec`
+
 ## Conclusion
 
 I am happy with the test drive approach, both TDD and BDD, that I have applied as well as the modular structure of the gem. Specifically the loose coupling of the grid model and the prime number generation. The creation of the model's cell values is also easily extensible by implementing a single method taking code block with the value calculation.
