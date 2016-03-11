@@ -37,7 +37,7 @@ Run `rspec` or `rake spec`.
 
 ## Using with docker
 
-If docker is available, you can save time by not installing ruby.
+If docker is available, you can avoid installing dependcies.
 
 * Build image `docker build -t prime-docker .`
 * Run rake task `docker run prime-docker rake prime_grid:console[6]`
