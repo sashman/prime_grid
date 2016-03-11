@@ -9,6 +9,14 @@ ___|  2|  3|  5|  7| 11
  11| 22| 33| 55| 77|121
 ```
 
+## Prerequisites
+
+* Ruby 2 and above
+* Ruby gems
+* Ruby bundler
+
+Run `bundle install` to install the required dependencies for running and testing the gem.
+
 ## Usage
 
 Use rake task to generate a console output:
