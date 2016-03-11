@@ -1,9 +1,7 @@
-<% top_row = ['_'] %>
+<% top_row = ['_' * padding] %>
 
-<% grid.column_headers.each do |value| %>
-    <% top_row << value %>
-<% end %>
+<% grid.column_headers.each do |value| top_row << "%#{padding}d" % value end %>
 
 <%= top_row.join '|' %>
-<% grid.row_headers.each_with_index do |value, index| %><%= value %>|<%= grid.row_values(index).join('|') %>
+<% grid.row_headers.each_with_index do |value, index| %><%= "%#{padding}d" % value %>|<%= grid.row_values(index).map{ |value| "%#{padding}d" % value }.join('|') %>
 <% end %>
