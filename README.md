@@ -23,6 +23,20 @@ Use rake task to generate a console output:
 
 `rake prime_grid:console[N]` where `N` is the number of primes to be generated
 
+## Tests
+
+Run `rspec` or `rake spec`.
+
+## Conclusion
+
+I am happy with the test drive approach, both TDD and BDD, that I have applied as well as the modular structure of the gem. Specifically the loose coupling of the grid model and the prime number generation. The creation of the model's cell values is also easily extensible by implementing a single method taking code block with the value calculation.
+
+Given extra time multiple areas of the gem can be handled:
+* I could use cucumber/gherkin for actual acceptances tests.
+* Since this a ruby gem it should be easily imported into rails/sinatra frame work for a web view.
+* A more efficient prime generation algorithm can be investigated.
+
+
 ## Installation as a gem
 
 Add this line to your application's Gemfile:
