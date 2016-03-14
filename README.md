@@ -68,3 +68,7 @@ And then execute:
 Or install it yourself as:
 
     $ gem install prime_grid
+    
+Create a grid model with:
+
+`get_model 123`
