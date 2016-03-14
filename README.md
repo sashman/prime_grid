@@ -45,7 +45,7 @@ If docker is available, you can avoid installing dependcies.
 
 ## Conclusion
 
-I am happy with the test drive approach, both TDD and BDD, that I have applied as well as the modular structure of the gem. Specifically the loose coupling of the grid model and the prime number generation. The creation of the model's cell values is also easily extensible by implementing a single method taking code block with the value calculation.
+I am happy with the test drive approach, both TDD and BDD, that I have applied as well as the modular structure of the gem. Specifically the loose coupling of the grid model and the prime number generation. The cell padding calculation is specific to the type of data contained in the grid and is integrated through the specifc controller. The creation of the model's cell values is also easily extensible by implementing a single method taking code block with the value calculation.
 
 Given extra time multiple areas of the gem can be handled:
 * I could use cucumber/gherkin for actual acceptances tests.
